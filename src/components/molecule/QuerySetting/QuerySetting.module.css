@@ -1,0 +1,36 @@
+.querySettings {
+	display: flex;
+	justify-content: flex-start;
+	align-items: start;
+	flex-flow: column;
+	gap: 15px;
+}
+.header {
+	font-family: "Bebas Neue";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 127%;
+	letter-spacing: 0.055em;
+	color: var(--text-dark);
+}
+.inputArea {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 15px;
+}
+.dropdown {
+	width: 70%;
+}
+.input {
+	width: 30%;
+}
+.sliderArea {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 15px;
+	flex-flow: column;
+	align-self: stretch;
+}

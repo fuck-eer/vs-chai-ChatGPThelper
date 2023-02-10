@@ -1,0 +1,34 @@
+.inputBox {
+	display: flex;
+	justify-content: flex-start;
+	align-items: start;
+	gap: 8px;
+	flex-flow: column;
+	color: var(--white);
+}
+.inputField {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 4px;
+	width: 100%;
+	background-color: var(--dark3);
+	min-height: 25px;
+	padding: 2px 5px;
+	border-radius: 4px;
+}
+.htmlInput {
+	all: unset;
+	flex-grow: 1;
+	height: 100%;
+	width: 100%;
+	padding: 10px 5px;
+	border-radius: 4px;
+	outline: none;
+}
+.htmlInput:focus {
+	outline: none;
+}
+.label {
+	color: var(--white);
+}

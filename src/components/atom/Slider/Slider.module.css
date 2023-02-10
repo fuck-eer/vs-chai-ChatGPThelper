@@ -1,0 +1,77 @@
+/* slider styles */
+.slider::-moz-range-track {
+	background-color: var(--text-dark);
+	height: 6px;
+	border-radius: 500px;
+}
+
+.slider::-webkit-slider-runnable-track {
+	background-color: var(--text-dark);
+	height: 6px;
+	border-radius: 500px;
+}
+.slider::-moz-range-progress {
+	background-color: var(--accent-theme);
+	height: 100%;
+	border-top-left-radius: 500px;
+	border-bottom-left-radius: 500px;
+}
+
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none; /* Override default look */
+	appearance: none;
+	margin-top: -3px;
+	width: 12px; /* Set a specific slider handle width */
+	height: 12px; /* Slider handle height */
+	border-radius: 500px;
+	background: var(--accent-theme); /* Green background */
+	cursor: pointer;
+	box-shadow: -4px 4px 4px var(--dark1); /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+	width: 12px; /* Set a specific slider handle width */
+	height: 12px;
+	border-radius: 500px;
+	/* Slider handle height */
+	background: var(--accent-theme); /* Green background */
+	cursor: pointer; /* Cursor on hover */
+	border: none;
+	box-shadow: -4px 4px 4px var(--text-dark);
+}
+.sliderContainer {
+	display: flex;
+	justify-content: flex-start;
+	align-items: start;
+	gap: 8px;
+	flex-flow: column;
+	align-self: stretch;
+	color: var(--white);
+}
+.inputField {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 12px;
+	width: 100%;
+	min-height: 25px;
+	padding: 2px 5px;
+	border-radius: 4px;
+}
+.slider {
+	-webkit-appearance: none;
+	appearance: none;
+	background: transparent;
+	cursor: pointer;
+	flex-grow: 1;
+	height: 100%;
+	width: 100%;
+	padding: 10px 5px;
+	border-radius: 4px;
+}
+.slider:focus {
+	outline: none;
+}
+.label {
+	color: var(--white);
+}

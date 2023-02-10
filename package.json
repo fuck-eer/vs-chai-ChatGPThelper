@@ -1,0 +1,65 @@
+{
+	"name": "chatgpt-helper",
+	"version": "0.0.1",
+	"icon": "logo.png",
+	"engines": {
+		"vscode": "^1.74.0"
+	},
+	"publisher": "nishchay",
+	"activationEvents": [
+		"*"
+	],
+	"main": "./build/ext-src/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "chatgpt-helper.start",
+				"title": "Open Chat GPT",
+				"category": "chatgpt-helper"
+			},
+			{
+				"command": "chatgpt-helper.auth",
+				"title": "Save GPT API Key",
+				"category": "chatgpt-helper"
+			},
+			{
+				"command": "chatgpt-helper.removeAuthKey",
+				"title": "Remove GPT API Key",
+				"category": "chatgpt-helper"
+			}
+		]
+	},
+	"dependencies": {
+		"@types/vscode": "^1.74.0",
+		"axios": "^1.2.6",
+		"react": "^17",
+		"react-dom": "^17",
+		"react-icons": "^4.7.1",
+		"terser": "^5.15.0",
+		"yarn": "^1.22.19"
+	},
+	"resolutions": {},
+	"scripts": {
+		"vscode:prepublish": "node ./scripts/build-non-split.js && tsc -p tsconfig.extension.json",
+		"start": "react-scripts start",
+		"build": "node ./scripts/build-non-split.js && tsc -p tsconfig.extension.json",
+		"eject": "react-scripts eject"
+	},
+	"devDependencies": {
+		"@types/jest": "^23.3.13",
+		"@types/node": "^10.1.2",
+		"@types/react": "^17",
+		"@types/react-dom": "^17",
+		"@types/vscode": "^1.74.0",
+		"clsx": "^1.2.1",
+		"react-scripts": "^5.0.1",
+		"rewire": "^6.0.0",
+		"typescript": "^4.9.4"
+	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
+	]
+}

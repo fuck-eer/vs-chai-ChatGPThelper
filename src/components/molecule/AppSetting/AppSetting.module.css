@@ -1,0 +1,87 @@
+.AppSetting {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: stretch;
+	flex-flow: column;
+	gap: 15px;
+}
+.header {
+	font-family: "Bebas Neue";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 127%;
+	letter-spacing: 0.055em;
+	color: var(--text-dark);
+}
+.settingPanel {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	gap: 20px;
+	color: var(--white);
+}
+.settingOption {
+	width: 50%;
+	display: flex;
+	gap: 8px;
+	flex-flow: column;
+	align-items: stretch;
+	justify-content: flex-start;
+}
+
+/* theme */
+.label {
+	color: var(--white);
+	font-weight: 500;
+}
+.themesOptions {
+	display: flex;
+	flex-flow: row;
+	justify-content: flex-start;
+	gap: 10px;
+	align-items: center;
+}
+
+.privacyButton {
+	width: 100%;
+	background-color: var(--accent-theme);
+	font-weight: 500;
+	padding: 5px;
+	border-radius: 5px;
+	text-align: center;
+	color: var(--black);
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 500;
+	cursor: pointer;
+}
+.privacyButton:hover {
+	filter: brightness(1.175);
+}
+
+.themeBox {
+	width: 28px;
+	height: 28px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.selectedTheme {
+	width: 30px;
+	height: 30px;
+	box-shadow: 0px 0px 0px 3px var(--dark1), 0px 0px 0px 4px var(--accent-theme);
+}
+
+.purple {
+	background-color: var(--accent-purple);
+}
+.yellow {
+	background-color: var(--accent-yellow);
+}
+.pink {
+	background-color: var(--accent-pink);
+}
+.green {
+	background-color: var(--accent-green);
+}

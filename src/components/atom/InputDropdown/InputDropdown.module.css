@@ -1,0 +1,88 @@
+.backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+.dropdown {
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-flow: column;
+	gap: 8px;
+	color: var(--white);
+}
+.inputField {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 4px;
+	width: 100%;
+	background-color: var(--dark3);
+	min-height: 25px;
+	padding: 2px 5px;
+	border-radius: 4px;
+	border: 1px solid transparent;
+}
+.visibleOptions {
+	border: 1px solid var(--accent-theme);
+}
+.label {
+	color: var(--white);
+}
+.htmlInput {
+	all: unset;
+	flex-grow: 1;
+	height: 100%;
+	padding: 10px 5px;
+	border-radius: 4px;
+	border: 1px solid transparent;
+	outline: none;
+}
+.htmlInput:focus {
+	outline: none;
+}
+.downArrow {
+	transition: all 0.2s;
+}
+.openCaret {
+	animation: rotate180 0.2s ease-in-out forwards;
+}
+
+.options {
+	position: absolute;
+	width: 100%;
+	top: 110%;
+	left: 0;
+	display: flex;
+	flex-flow: column nowrap;
+	height: 120px;
+	overflow-y: auto;
+	border-radius: 4px;
+	background-color: var(--dark3);
+}
+.option {
+	transition: all 0.5px;
+	padding: 10px 5px;
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+	align-items: center;
+}
+.option:hover {
+	background-color: var(--dark1);
+}
+.selected {
+	background-color: var(--dark1);
+}
+
+@keyframes rotate180 {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(180deg);
+	}
+}
