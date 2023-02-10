@@ -2,10 +2,13 @@
 	"name": "chatgpt-helper",
 	"version": "0.0.1",
 	"icon": "logo.png",
+	"repository": {
+		"url": "https://github.com/fuck-eer/vs-chai-ChatGPThelper"
+	},
 	"engines": {
 		"vscode": "^1.74.0"
 	},
-	"publisher": "nishchay",
+	"publisher": "fuckeer",
 	"activationEvents": [
 		"*"
 	],
