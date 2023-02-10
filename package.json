@@ -1,5 +1,5 @@
 {
-	"name": "chatgpt-helper",
+	"name": "chai",
 	"version": "0.0.1",
 	"icon": "logo.png",
 	"repository": {
@@ -16,19 +16,19 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "chatgpt-helper.start",
+				"command": "chai.start",
 				"title": "Open Chat GPT",
-				"category": "chatgpt-helper"
+				"category": "CH.AI"
 			},
 			{
-				"command": "chatgpt-helper.auth",
+				"command": "chai.auth",
 				"title": "Save GPT API Key",
-				"category": "chatgpt-helper"
+				"category": "CH.AI"
 			},
 			{
-				"command": "chatgpt-helper.removeAuthKey",
+				"command": "chai.removeAuthKey",
 				"title": "Remove GPT API Key",
-				"category": "chatgpt-helper"
+				"category": "CH.AI"
 			}
 		]
 	},

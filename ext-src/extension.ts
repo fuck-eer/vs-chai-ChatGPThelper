@@ -13,21 +13,21 @@ export function activate(context: vscode.ExtensionContext) {
 		100
 	);
 	chaiStatusBarItem.command = TokenManager.getToken()
-		? "chatgpt-helper.start"
-		: "chatgpt-helper.auth";
+		? "chai.start"
+		: "chai.auth";
 	chaiStatusBarItem.tooltip = "CH.AI";
-	chaiStatusBarItem.name = "chai:ChatGPT-Helper";
+	chaiStatusBarItem.name = "chai:chai";
 	chaiStatusBarItem.text = "$(comment-discussion) CH.AI";
 
 	context.subscriptions.push(chaiStatusBarItem);
 	context.subscriptions.push(
-		vscode.commands.registerCommand("chatgpt-helper.start", () => {
+		vscode.commands.registerCommand("chai.start", () => {
 			ReactPanel.createOrShow(context.extensionPath);
 			chaiStatusBarItem.hide();
 		})
 	);
 	context.subscriptions.push(
-		vscode.commands.registerCommand("chatgpt-helper.removeAuthKey", () => {
+		vscode.commands.registerCommand("chai.removeAuthKey", () => {
 			try {
 				TokenManager.removeToken().then(() => {
 					vscode.commands
@@ -48,7 +48,7 @@ export function activate(context: vscode.ExtensionContext) {
 	);
 
 	context.subscriptions.push(
-		vscode.commands.registerCommand("chatgpt-helper.auth", () => {
+		vscode.commands.registerCommand("chai.auth", () => {
 			vscode.window
 				.showInputBox({
 					prompt: "https://beta.openai.com/account/api-keys",
@@ -58,7 +58,7 @@ export function activate(context: vscode.ExtensionContext) {
 					if (enteredValue) {
 						try {
 							TokenManager.setToken(enteredValue).then(() => {
-								vscode.commands.executeCommand("chatgpt-helper.start");
+								vscode.commands.executeCommand("chai.start");
 							});
 						} catch (err) {
 							vscode.window.showErrorMessage("unable to set GPT API Key");
@@ -153,7 +153,7 @@ class ReactPanel {
 						return;
 					}
 					case "removeToken": {
-						vscode.commands.executeCommand("chatgpt-helper.removeAuthKey");
+						vscode.commands.executeCommand("chai.removeAuthKey");
 						return;
 					}
 					case "getTheme": {
